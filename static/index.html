@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>飞机大战</title>
+    <script src="js/Tween.js"></script>
+    <script src="js/pixi.js"></script>
+    <script src="js/pixi-sound.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/logic.js"></script>
+    <style>
+        html,
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+
+        @font-face {
+            font-family: wawa;
+            src: url('Image/迷你简娃娃篆.ttf')
+        }
+
+        ._loadtext {
+            position: fixed;
+            top: -500px;
+            left: -500px;
+            visibility: hidden;
+            z-index: -1;
+            font-family: wawa;
+        }
+
+        #game-app {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="_loadtext">123</div>
+    <script>
+        //document.addEventListener('DOMContentLoaded', GameAPP)
+        onload = GameAPP
+    </script>
+</body>
+
+</html>

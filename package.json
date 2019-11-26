@@ -1,0 +1,17 @@
+{
+  "name": "feiji",
+  "version": "1.0.0",
+  "description": "飞机大战web游戏",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "飞机大战"
+  ],
+  "author": "wjw",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
