@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>飞机大战</title>
+    <script src="js/fontloader.js"></script>
     <script src="js/Tween.js"></script>
     <script src="js/pixi.js"></script>
     <script src="js/pixi-sound.js"></script>
@@ -19,19 +20,19 @@
             background: #000;
         }
 
-        @font-face {
+        /* @font-face {
             font-family: wawa;
             src: url('Image/迷你简娃娃篆.ttf')
-        }
+        } */
 
-        ._loadtext {
+        /* ._loadtext {
             position: fixed;
             top: -500px;
             left: -500px;
             visibility: hidden;
             z-index: -1;
             font-family: wawa;
-        }
+        } */
 
         #game-app {
             position: absolute;
@@ -43,10 +44,23 @@
 </head>
 
 <body>
-    <div class="_loadtext">123</div>
+    <!-- <div class="_loadtext">123</div> -->
     <script>
+        console.table({
+            '字体下载管理': '√',
+            '图像对象池': '√',
+            '游戏声音': '√',
+            '游戏debug及显示优化': '√',
+            '游戏键盘操作': '√',
+            '多边形碰撞检测': '×'
+        })
+        fontLoader.timeout(2e3).add({ name: 'wawa', ttf: 'font/迷你简娃娃篆.ttf' })
+            .load((fail, ok) => {
+                console.info(fail, ok)
+                if (ok.length < 1) { alert('字体加载失败!') }
+                GameAPP()
+            })
         //document.addEventListener('DOMContentLoaded', GameAPP)
-        onload = GameAPP
     </script>
 </body>
 
